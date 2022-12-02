@@ -1,0 +1,18 @@
+@use "./scss/base/colors";
+@use "./scss/base/reset";
+@use "./scss/base/typography";
+
+/* Components */
+@use "./scss/components/Form";
+@use "./scss/components/Header";
+@use "./scss/components/Movie";
+@use "./scss/components/Card";
+@use "./scss/components/MovieList";
+@use "./scss/components/Button";
+@use "./scss/components/MovieDetails";
+@use "./scss/pages/Login";
+@use "./scss/pages/ResetComp";
+@use "./scss/pages/Register";
+@use "./scss/pages/Dashboard";
+
+/* Layout */

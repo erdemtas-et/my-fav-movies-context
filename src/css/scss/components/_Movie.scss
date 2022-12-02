@@ -1,0 +1,45 @@
+@use "../base/typography";
+
+.card {
+  .image-container {
+    display: flex;
+
+    padding: 0.3em;
+    justify-content: center;
+    img {
+      width: 150px;
+      height: 200px;
+    }
+  }
+  .info-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.4em;
+    gap: 1em;
+
+    .btn-container {
+      display: flex;
+      gap: 5px;
+    }
+  }
+}
+
+.card {
+  .title-text {
+    font-size: 1.1rem;
+    padding-right: 0.3rem;
+    font-weight: typography.$font-bold;
+    font-family: typography.$font-face;
+  }
+  .rating-text {
+    font-size: 0.9rem;
+    font-weight: typography.$font-light;
+    font-family: typography.$font-face;
+  }
+  .year-text {
+    font-size: 0.9rem;
+    font-weight: typography.$font-light;
+    font-family: typography.$font-face;
+  }
+}

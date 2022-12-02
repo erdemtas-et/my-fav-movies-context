@@ -1,0 +1,76 @@
+@use "../base/colors";
+@use "../base/typography";
+
+.movie-details-container {
+  height: 100vh;
+  font-family: typography.$font-face;
+  background-color: colors.$primary-color;
+  color: colors.$secondry-color;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.85);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    text-align: center;
+    padding: 1em;
+    font-weight: typography.$font-bold;
+    line-height: 1.2em;
+    font-size: 1.3rem;
+  }
+
+  img {
+    width: 95%;
+    max-width: 800px;
+  }
+}
+
+.other-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0.7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1em;
+
+  .info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+
+    .info-2 {
+      text-align: right;
+    }
+  }
+
+  .homepage-href {
+    color: inherit;
+
+    &:hover {
+      color: colors.$hover-color;
+    }
+  }
+
+  .overview-container {
+    margin: 0 auto;
+    max-width: 600px;
+
+    .overview {
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .info-container {
+    font-size: 0.9rem;
+  }
+}

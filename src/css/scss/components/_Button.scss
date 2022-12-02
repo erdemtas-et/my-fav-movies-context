@@ -1,0 +1,27 @@
+@use "../base/colors";
+
+.btn {
+  width: 8em;
+  height: 3em;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: colors.$button-light;
+  color: colors.$primary-color;
+
+  &:hover {
+    background-color: colors.$button-hover;
+  }
+}
+
+.btn-secondary {
+  background-color: colors.$button-dark;
+  color: colors.$alt-color;
+
+  &:hover {
+    background-color: colors.$button-hover;
+  }
+}
