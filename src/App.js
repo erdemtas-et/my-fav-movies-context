@@ -10,33 +10,26 @@ import {
 } from "react-router-dom";
 import { MovieProvider } from "./context/MovieContext";
 import MovieDetails from "./Pages/MovieDetails";
-import Login from "./Pages/Login";
-import Dashboard from "./Pages/Dashboard";
-import Register from "./Pages/Register";
 
 function App() {
   return (
     <MovieProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<Login />}></Route>
           <Route
-            path="/dashboard"
+            path="/"
             element={
               <div>
-                <Dashboard></Dashboard>
                 <Header />
                 <MovieList></MovieList>
               </div>
             }
           />
-
           <Route
             path="/movie/:movieID"
             element={<MovieDetails></MovieDetails>}
           ></Route>
-          <Route path="/movie/:movieID/*" element={<Error />}></Route>
-          <Route path="/register" element={<Register />}></Route>
+          <Route path="/movie/:movieID/*" element={<Error />}></Route>n
           <Route path="/*" element={<Error />}></Route>
         </Routes>
       </Router>

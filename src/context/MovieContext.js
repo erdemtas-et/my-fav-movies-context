@@ -1,8 +1,5 @@
 import { createContext, useState, useEffect } from "react";
 
-import { db } from "../firebase";
-import { collection, getDocs } from "firebase/firestore";
-
 const MovieContext = createContext();
 
 export const MovieProvider = ({ children }) => {
@@ -11,20 +8,6 @@ export const MovieProvider = ({ children }) => {
     favourites: [],
     text: "",
   });
-
-  const userRef = collection(db, "users");
-
-  useEffect(() => {
-    const getFav = async () => {
-      const data = await getDocs(userRef);
-      data.docs.map((doc) => {
-        console.log(doc);
-        return;
-      });
-    };
-
-    getFav();
-  }, []);
 
   const [id, setId] = useState(null);
 
